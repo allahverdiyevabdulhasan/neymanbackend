@@ -1,0 +1,14 @@
+--- PythonAnywhere WSGI snippet ---
+Replace YOUR_PYTHONANYWHERE_USERNAME with your username and paste into the WSGI file editor on PythonAnywhere (Web tab).
+
+import os
+import sys
+
+project_home = '/home/YOUR_PYTHONANYWHERE_USERNAME/neymanbackend'
+if project_home not in sys.path:
+    sys.path.insert(0, project_home)
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings')
+
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
