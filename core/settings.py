@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-dev-fallback')
 DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
 
 # Allowed hosts (space-separated env var or default localhosts)
-_hosts = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost 127.0.0.1')
+_hosts = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost 127.0.0.1 neymantech.pythonanywhere.com *')
 ALLOWED_HOSTS = _hosts.split()
 
 
